@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Lê os valores de A e B
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        // Calcula a soma entre A e B
+        int soma = a + b;
+        
+        // Imprime a mensagem com a soma
+        System.out.println("SOMA = " + soma);
+        
+        sc.close();
+    }
+}
