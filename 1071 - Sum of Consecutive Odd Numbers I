@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        sc.close();
+        
+        int lower, higher;
+        if (x < y) {
+            lower = x;
+            higher = y;
+        } else {
+            lower = y;
+            higher = x;
+        }
+
+        int sum = 0;
+        for (int i = lower + 1; i < higher; i++) {
+            if (i % 2 != 0) {
+                sum += i;
+            }
+        }
+
+        System.out.println(sum);
+    }
+}
