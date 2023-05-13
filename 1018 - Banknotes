@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int value = sc.nextInt();
+        System.out.println(value);
+
+        int[] banknotes = { 100, 50, 20, 10, 5, 2, 1 };
+        int[] quantity = new int[7];
+
+        for (int i = 0; i < banknotes.length; i++) {
+            quantity[i] = value / banknotes[i];
+            value %= banknotes[i];
+            System.out.printf("%d nota(s) de R$ %d,00%n", quantity[i], banknotes[i]);
+        }
+
+        sc.close();
+    }
+}
