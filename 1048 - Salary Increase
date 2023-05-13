@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double salary = sc.nextDouble();
+
+        double readjustmentRate;
+        if (salary <= 400.0) {
+            readjustmentRate = 0.15;
+        } else if (salary <= 800.0) {
+            readjustmentRate = 0.12;
+        } else if (salary <= 1200.0) {
+            readjustmentRate = 0.10;
+        } else if (salary <= 2000.0) {
+            readjustmentRate = 0.07;
+        } else {
+            readjustmentRate = 0.04;
+        }
+
+        double readjustment = salary * readjustmentRate;
+        double newSalary = salary + readjustment;
+        double percentual = readjustmentRate * 100.0;
+
+        System.out.printf("Novo salario: %.2f\n", newSalary);
+        System.out.printf("Reajuste ganho: %.2f\n", readjustment);
+        System.out.printf("Em percentual: %.0f %%\n", percentual);
+    }
+}
