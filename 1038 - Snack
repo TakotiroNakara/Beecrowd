@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int productCode = input.nextInt();
+        int quantity = input.nextInt();
+
+        double totalPrice = 0.0;
+
+        if (productCode == 1) {
+            totalPrice = 4.00 * quantity;
+        } else if (productCode == 2) {
+            totalPrice = 4.50 * quantity;
+        } else if (productCode == 3) {
+            totalPrice = 5.00 * quantity;
+        } else if (productCode == 4) {
+            totalPrice = 2.00 * quantity;
+        } else if (productCode == 5) {
+            totalPrice = 1.50 * quantity;
+        }
+
+        System.out.printf("Total: R$ %.2f\n", totalPrice);
+    }
+}
