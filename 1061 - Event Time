@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // lê a hora de início
+        String str1 = sc.next();
+        int dia1 = sc.nextInt();
+        int hora1 = sc.nextInt();
+        sc.next();
+        int min1 = sc.nextInt();
+        sc.next();
+        int seg1 = sc.nextInt();
+
+        // lê a hora de fim
+        String str2 = sc.next();
+        int dia2 = sc.nextInt();
+        int hora2 = sc.nextInt();
+        sc.next();
+        int min2 = sc.nextInt();
+        sc.next();
+        int seg2 = sc.nextInt();
+
+        // calcula a duração total do evento em segundos
+        int duracaoTotalSegundos = (dia2 - dia1) * 86400 + (hora2 - hora1) * 3600 + (min2 - min1) * 60 + (seg2 - seg1);
+
+        // converte a duração para dias, horas, minutos e segundos
+        int duracaoDias = duracaoTotalSegundos / 86400;
+        duracaoTotalSegundos %= 86400;
+
+        int duracaoHoras = duracaoTotalSegundos / 3600;
+        duracaoTotalSegundos %= 3600;
+
+        int duracaoMinutos = duracaoTotalSegundos / 60;
+        duracaoTotalSegundos %= 60;
+
+        int duracaoSegundos = duracaoTotalSegundos;
+
+        // imprime a duração do evento
+        System.out.println(duracaoDias + " dia(s)");
+        System.out.println(duracaoHoras + " hora(s)");
+        System.out.println(duracaoMinutos + " minuto(s)");
+        System.out.println(duracaoSegundos + " segundo(s)");
+
+        sc.close();
+    }
+}
